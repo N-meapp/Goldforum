@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>Centered Logo Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Bolkit&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -12,64 +14,80 @@
     
 </head>
 <body class="bg-white">
+<!-- Loader -->
+<!-- <div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-[9999]">
+  <img src="./static/images/logo.png" alt="Loading..." id="loader-img" class="w-20 h-20">
+</div> -->
 
-  <div class="overlay " id="overlay"></div>
+  <div class="overlay" id="overlay"></div>
 
-  <header class="relative w-full h-screen bg-no-repeat bg-center bg-cover" style='background-image: url("./static/images/image 1.png");'>
+
+
+  <header class="relative w-full h-screen bg-no-repeat bg-center bg-cover" style="background-image: url('./static/images/image 1.png');">
     <div class="absolute top-0 left-0 w-full h-full"></div>
   
-    
     <div id="navbar" class="fixed top-0 left-0 w-full flex flex-col items-center z-50 transition-all duration-300">
-      <div class="relative z-10 flex justify-center items-center mt-[-30px]">
-        <img id="logo" src="./static/images/logo2.png" alt="Logo" class="h-[300px] w-[300px] object-contain transition-all duration-300 md:h-[198px] md:w-[198px]">
+      <div class="relative z-10 flex justify-center items-center mt-[-30px] px-4 sm:px-8 md:px-16 lg:py-4">
+        <a href="index.html">
+          <img id="logo" src="./static/images/logo2.png" alt="Logo" 
+            class="h-[180px] w-[180px] object-contain transition-all duration-300 
+                   sm:h-[200px] sm:w-[200px] 
+                   md:h-[220px] md:w-[220px] 
+                   lg:h-[137px] lg:w-[250px]">
+        </a>
+        
       </div>
   
-      <hr id="nav-hr" class="border-t border-white mx-8 sm:mx-32 md:mx-64 my-4 mt-[-40px] relative z-10 w-1/2">
+      <hr id="nav-hr" class="border-t border-white mx-8 sm:mx-16 md:mx-32 my-4 mt-[-34px] relative z-10 w-3/4 sm:w-1/2 md:w-1/3">
   
-      <div class="relative z-10 flex justify-center space-x-8 navbar-links mb-4">
-        <a href="#" id="link1" class="text-md text-white transition-all duration-300 text-lg sm:text-xl md:text-md">What We Do</a>
-        <a href="#" id="link2" class="text-md text-white transition-all duration-300 text-lg sm:text-xl md:text-md">Contact Us</a>
+      <div class="relative z-10 flex justify-center space-x-4 sm:space-x-8 navbar-links mb-4 px-4 sm:px-8">
+        
+        <a href="what_We_do.html" id="link1" class="text-md text-white transition-all duration-300 text-lg sm:text-xl md:text-lg">What We Do</a>
+        <a href="contact.html" id="link2" class="text-md text-white transition-all duration-300 text-lg sm:text-xl md:text-lg">Contact Us</a>
       </div>
     </div>
   
-    
-    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[80%] text-white content" id="content" style="opacity: 0.6;">
-      <h1 id="animated-heading" class="text-[120px] sm:text-[90px] md:text-[120px] lg:text-[130px] mt-20 font-medium text-white text-center leading-tight heading" style="font-family: 'Philosopher', sans-serif; line-height: 1;">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center w-[90%] sm:w-[80%] md:w-[70%] text-white content" id="content" style="opacity: 0.6;">
+      <h1 id="animated-heading" class="text-[48px] sm:text-[70px] md:text-[90px] lg:text-[120px] font-medium text-white text-center leading-tight heading" style="font-family: 'Philosopher', sans-serif; line-height: 1;">
         The ultimate jewelry experience
       </h1>
     </div>
   
- 
-    <div class="absolute bottom-0 left-0 p-4 text-white text-lg z-10">
-      <p class="text-center font-extralight text-sm sm:text-base">
+    <div class="absolute bottom-0 left-0 p-4 text-white text-lg z-10 px-4 sm:px-8">
+      <!-- <p class="text-center font-extralight text-sm sm:text-base">
         Discover exquisite, custom-designed jewelry that reflects your unique style and elegance.
-      </p>
+      </p> -->
     </div>
-</header>
+  </header>
+  
+
+  
   
 
 
 
 
-  <div class="container mt-20 p-8 flex gap-8 w-[70%] h-auto mx-auto items-start">
+  <div class="container mt-20 p-8 flex gap-10 w-full md:w-[65%] h-auto mx-auto items-start flex-wrap max-md:p-4">
 
-    
-    <div class="flex-1">
-      <h1 class="text-[7rem] w-32 font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">ABOUT US</h1>
-      <p class="text-lg text-black">
-        Our journey began with a vision to create a space where customers can find quality and innovative solutions that meet their unique needs.
-      </p>
-      <p class="text-lg text-black">
-        We provide cutting-edge solutions that drive change and innovation in every aspect of life. We provide cutting-edge solutions that drive change and innovation in every aspect of life.
-      </p>
+    <div class="flex-1 mb-8 sm:mb-0">
+     
+      <h1 class="text-[5rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] w-full font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
+        ABOUT US
+      </h1>
+     
+      <p class="text-lg sm:text-base md:text-lg text-black mb-4">
+        At Gold Forum, we are dedicated to bringing you the finest quality jewelry, combining timeless elegance with modern craftsmanship. Our collection features a wide variety of designs, from traditional ornaments to contemporary pieces, all meticulously crafted to suit every style and occasion.      </p>
+      <p class="text-lg sm:text-base md:text-lg text-black">
+        We believe in offering more than just beautiful jewelry. Our team of skilled artisans is passionate about creating customized designs that bring your unique vision to life. Whether you're looking for a personalized gift or a one-of-a-kind piece for yourself, we are here to turn your dreams into reality.      </p>
     </div>
   
    
-    <div class="flex-1 bg-cover bg-right h-full p-6 flex flex-col justify-start">
-      <p class="text-lg">We provide cutting-edge solutions that drive change and innovation in every aspect of life. We provide cutting-edge solutions that drive change and innovation in every aspect of life.</p>
+    <div class="flex-1 bg-cover bg-right h-full p-6 flex flex-col justify-start max-md:p-0">
+      <p class="text-lg sm:text-base md:text-lg mb-4">
+        Our platform caters to both retail and wholesale customers, ensuring that every need is met with professionalism and care. From individual buyers to business owners looking to stock their stores, we provide a seamless and reliable shopping experience, with the option for custom manufacturing and bulk orders at competitive prices.      </p>
   
-     
-      <div class="bg-[#EEEBE3] h-[450px] w-[350px] rounded-tl-full ml-auto mt-0">
+    
+      <div class="bg-[#EEEBE3] h-[450px] sm:h-[350px] w-full sm:w-[350px] rounded-tl-full ml-auto mt-0">
         <img src="./static/images/about2.png" class="h-full w-full object-cover rounded-tl-full">
       </div>
     </div>
@@ -78,32 +96,37 @@
   
   
   
-
-
-
-<div class="mt-20">
-  <h1 class="text-[7rem] w-[70%] px-[2.2rem] mx-auto  font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
-    Shine in Style
-  </h1>
   
   
-  <p class="w-[70%] mx-auto px-10">Browse through our diverse collection of jewelry categories to find the perfect piece for every occasion.</p>
-</div>
 
 
 
+  <div class="mt-20">
 
-
-
-
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-10 p-8 w-[69%] mx-auto">
-
-
-    <div class="flex flex-col items-center">
-      <div class="relative group overflow-hidden rounded-lg  w-full">
-        <img src="./static/images/gold.jpeg" alt="Category 1" class="w-[400px] h-[300px] object-cover">
-        
+    <h1 class="text-[5rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] w-full sm:w-[70%] px-[2.2rem] mx-auto font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
+      Shine in Style
+    </h1>
+  
    
+    <p class="sm:w-[70%] mx-auto px-4 sm:px-10 text-lg sm:text-xl md:text-lg max-md:px-[2.5rem]">
+      Browse through our diverse collection of jewelry categories to find the perfect piece for every occasion.
+    </p>
+  </div>
+  
+
+
+
+
+
+
+
+  <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 mt-10 p-8 w-[90%] mx-auto px-44 max-md:px-0">
+
+   
+    <div class="flex flex-col items-center">
+      <div class="relative group overflow-hidden rounded-lg w-full">
+        <img src="./static/images/gold.jpeg" alt="Category 1" class="w-full h-[300px] object-cover">
+        
         <div class="absolute inset-0 flex items-center justify-end">
           <div class="w-0 h-full group-hover:w-[50%] transition-all duration-500 ease-in-out bg-[#EEEBE3]/60 clip-triangle-right relative overflow-hidden">
             <div class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-800 text-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
@@ -112,16 +135,15 @@
           </div>
         </div>
       </div>
-     
+      
       <h1 class="mt-4 text-lg font-bold text-center">Gold Jewelry</h1>
     </div>
   
-    
+
     <div class="flex flex-col items-center">
-      <div class="relative group overflow-hidden rounded-lg  w-full">
-        <img src="./static/images/stone.jpeg" alt="Category 2" class="w-[400px] h-[300px] object-cover">
+      <div class="relative group overflow-hidden rounded-lg w-full">
+        <img src="./static/images/stone.jpeg" alt="Category 2" class="w-full h-[300px] object-cover">
         
-    
         <div class="absolute inset-0 flex items-center justify-end">
           <div class="w-0 h-full group-hover:w-[50%] transition-all duration-500 ease-in-out bg-[#EEEBE3]/60 clip-triangle-right relative overflow-hidden">
             <div class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-800 text-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
@@ -130,52 +152,99 @@
           </div>
         </div>
       </div>
-     
-      <h1 class="mt-4 text-lg font-bold text-center">Stone Work Jewelry</h1>
+      
+      <h1 class="mt-4 text-lg font-bold text-center">Diamonds</h1>
     </div>
   
-   
+    
     <div class="flex flex-col items-center">
-      <div class="relative group overflow-hidden rounded-lg  w-full">
-        <img src="./static/images/custom.jpeg" alt="Category 3" class="w-[400px] h-[300px] object-cover">
+      <div class="relative group overflow-hidden rounded-lg w-full">
+        <img src="./static/images/custom.jpeg" alt="Category 3" class="w-full h-[300px] object-cover">
         
-       
         <div class="absolute inset-0 flex items-center justify-end">
           <div class="w-0 h-full group-hover:w-[50%] transition-all duration-500 ease-in-out bg-[#EEEBE3]/60 clip-triangle-right relative overflow-hidden">
             <div class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-800 text-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-              Signature & Exclusive
+              Elite & Distinctive
             </div>
           </div>
         </div>
       </div>
-     
-      <h1 class="mt-4 text-lg font-bold text-center">Custom Jewelry Design</h1>
+      
+      <h1 class="mt-4 text-lg font-bold text-center">Rings</h1>
     </div>
   
-   
+ 
     <div class="flex flex-col items-center">
-      <div class="relative group overflow-hidden rounded-lg  w-full">
-        <img src="./static/images/brida.webp" alt="Category 4" class="w-[400px] h-[300px] object-cover">
+      <div class="relative group overflow-hidden rounded-lg w-full">
+        <img src="./static/images/brida.webp" alt="Category 4" class="w-full h-[300px] object-cover">
         
-     
         <div class="absolute inset-0 flex items-center justify-end">
           <div class="w-0 h-full group-hover:w-[50%] transition-all duration-500 ease-in-out bg-[#EEEBE3]/60 clip-triangle-right relative overflow-hidden">
             <div class="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-800 text-center text-sm font-semibold opacity-0 group-hover:opacity-100 transition duration-500 ease-in-out">
-              Elegant & Exquisite
+              Classy & Fine
             </div>
           </div>
         </div>
       </div>
-     
+      
       <h1 class="mt-4 text-lg font-semibold text-center">Bridal Jewelry</h1>
     </div>
   
   </div>
   
   
+  
 
+  <section class="flex flex-col sm:flex-row items-center justify-between py-16 px-4 xl:px-64 max-md:px-4">
+    <div class="w-full sm:w-full mb-8 sm:mb-0 text-center sm:text-left">
+      <h1 class="text-[5rem] sm:text-[6rem] md:text-[7rem] lg:text-[8rem] w-full sm:w-[100%] px-4 sm:px-0 mx-auto font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
+        Our Services
+      </h1>
+      <p class="text-lg sm:text-xl font-light mx-auto sm:mx-0 px-4 sm:px-0 w-full sm:w-[80%] lg:w-[70%]">
+        Offering expert jewelry craftsmanship with personalized designs, stone works and high-quality manufacturing. We help you create the perfect piece that reflects your unique style.
+      </p>
+    </div>
+  
+  
+    <div class="flex flex-col sm:flex-row justify-center items-center h-auto sm:h-screen  sm:mt-0">
+      <div class="flex gap-8 sm:flex-row flex-col sm:gap-8 sm:ml-0  sm:mt-0 max-md:mt-[-8rem]">
+        
+      
+        <div class="relative w-64 h-72 bg-gray-200 shadow-lg rounded-lg overflow-hidden xl:ml-[17rem] mt-[11rem]">
+          <img src="./static/images/manufacturing.jpeg" alt="Card 3 Image" class="w-full h-full object-cover">
+          <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
+            <p class="text-white text-lg text-center">Expert craftsmanship in manufacturing jewelry, creating timeless pieces.</p>
+          </div>
+          <h1 class="absolute bottom-4 left-4 text-xl text-white">Manufacturing Jewelry</h1>
+        </div>
+  
+     
+        <div class="flex flex-col justify-center items-center gap-4">
+     
+          <div class="relative w-64 h-72 bg-gray-200 shadow-lg rounded-lg overflow-hidden">
+            <img src="./static/images/custom2.jpeg" alt="Card 1 Image" class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
+              <p class="text-white text-lg text-center">Creating customized jewelry designs to match your unique style.</p>
+            </div>
+            <h1 class="absolute bottom-4 left-4 text-xl text-white">Customized Design</h1>
+          </div>
+  
+         
+          <div class="relative w-64 h-72 bg-gray-200 shadow-lg rounded-lg overflow-hidden">
+            <img src="./static/images/stone2.jpeg" alt="Card 2 Image" class="w-full h-full object-cover">
+            <div class="absolute inset-0 flex justify-center items-center bg-black bg-opacity-50 opacity-0 hover:opacity-100 transition-opacity">
+              <p class="text-white text-lg text-center">Handcrafted stone works, adding beauty and elegance to your jewelry.</p>
+            </div>
+            <h1 class="absolute bottom-4 left-4 text-xl text-white">Stone Works</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
 
-
+  
 
 
 
@@ -183,30 +252,30 @@
 
   <div class="bg-[#56433d]/60 w-full h-[20rem] relative overflow-hidden flex flex-col justify-center items-center mt-20">
 
-  
+   
     <img src="./static/images/about3.png" alt="Your Image" class="absolute top-[-9rem] left-[-9rem] w-96 h-96 object-cover rounded-full opacity-50 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
   
-    
+   
     <img src="./static/images/about3.png" alt="Your Image" class="absolute bottom-[-9rem] right-[-9rem] w-96 h-96 object-cover rounded-full opacity-50 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]">
   
-    
-    <h1 class="text-[7rem] w-[70%] px-[2.2rem] mx-auto font-semibold mb-4 leading-none text-[#EEEBE3] text-center relative z-10 sm:text-6xl md:text-7xl lg:text-[8rem]">
-      Custom Made
+  
+    <h1 class="text-[2rem] w-[70%] px-[2.2rem] mx-auto font-semibold mb-4 leading-none text-[#EEEBE3] text-center relative z-10 sm:text-6xl md:text-7xl lg:text-[8rem]">
+      Enquire Now
     </h1>
-  
-   
+    
     <p class="text-center text-[#EEEBE3] text-xl font-light w-3/4 mx-auto mb-8 sm:text-lg md:text-xl lg:text-2xl">
-      Tailored to your unique style. Let us create something that speaks to you and enhances your beauty.
+      Have any questions or need assistance? We're here to help you with all your queries. Reach out to us today!
     </p>
-  
-   
+    
     <div class="flex justify-center">
-      <a href="#shop" class="bg-[#EEEBE3] text-[#56433d] px-6 py-3 rounded-full text-xl font-semibold hover:bg-[#74645f] hover:text-white transition duration-300 sm:text-lg md:text-xl lg:text-xl">
-        Contact Now
+      <a href="contact.html" class="bg-[#EEEBE3] text-[#56433d] px-6 py-3 rounded-full text-xl font-semibold hover:bg-[#74645f] hover:text-white transition duration-300 sm:text-lg md:text-xl lg:text-xl">
+        Get in Touch
       </a>
     </div>
+    
   
   </div>
+  
   
   
   
@@ -217,14 +286,17 @@
 
   
     <div class="w-full flex flex-col justify-center items-center text-center">
-      <h1 class="text-[4rem] sm:text-[5rem] md:text-[7rem] w-[80%] sm:w-[75%] md:w-[70%] mx-auto font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
+      <h1 class="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] w-[80%] sm:w-[75%] md:w-[70%] mx-auto font-semibold mb-4 leading-none text-[#EEEBE3]" style="opacity: 0.9;">
         Why Choose Us
       </h1>
-      <p class="w-[80%] sm:w-[75%] md:w-[70%] mx-auto">Browse through our diverse collection of jewelry categories to find the perfect piece for every occasion.</p>
+      <p class="w-[80%] sm:w-[75%] md:w-[70%] mx-auto text-center">
+        Experience exceptional craftsmanship, personalized designs, and a wide range of options, all tailored to meet your unique style and needs.
+      </p>
     </div>
   
-   
+    
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10">
+  
      
       <div class="group bg-white rounded-lg shadow-md p-6 h-[300px] flex flex-col items-center text-center justify-center relative overflow-hidden transition-all duration-300">
         <div class="absolute inset-0 bg-[#56433d]/80 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg"></div>
@@ -235,7 +307,7 @@
         </div>
       </div>
   
-   
+      
       <div class="group bg-white rounded-lg shadow-md p-6 h-[300px] flex flex-col items-center text-center justify-center relative overflow-hidden transition-all duration-300">
         <div class="absolute inset-0 bg-[#56433d]/80 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg"></div>
         <div class="relative z-10 flex flex-col items-center">
@@ -255,7 +327,7 @@
         </div>
       </div>
   
-
+     
       <div class="group bg-white rounded-lg shadow-md p-6 h-[300px] flex flex-col items-center text-center justify-center relative overflow-hidden transition-all duration-300">
         <div class="absolute inset-0 bg-[#56433d]/80 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-lg"></div>
         <div class="relative z-10 flex flex-col items-center">
@@ -264,21 +336,25 @@
           <p class="text-gray-600 text-sm group-hover:text-white transition-all duration-300">Handpicked designs you won't find anywhere else.</p>
         </div>
       </div>
+      
     </div>
   </div>
+  
   
   
 
   <footer class="bg-[#56433d] text-white py-16 mt-20">
     <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
-  
+    
      
-      <div class="flex flex-col items-start">
-        <img src="./static/images/logo2.png" alt="Logo" class="w-44 mb-4">
+      <div class="flex flex-col items-start max-md:items-center">
+        <a href="index.html">
+          <img src="./static/images/logo2.png" alt="Logo" class="w-44 mb-4">
+      </a>
         <p class="text-white text-sm">Elegance Redefined - Jewelry for Every Moment.</p>
       </div>
   
-
+     
       <div>
         <h1 class="text-lg mb-4 text-center sm:text-left">Explore</h1>
         <ul class="space-y-2 text-center sm:text-left">
@@ -287,7 +363,7 @@
         </ul>
       </div>
   
-   
+      
       <div>
         <h1 class="text-lg mb-4 text-center sm:text-left">Contact</h1>
         <ul class="space-y-2 text-white text-sm text-center sm:text-left">
@@ -297,7 +373,7 @@
         </ul>
       </div>
   
- 
+     
       <div>
         <h1 class="text-lg mb-4 text-center sm:text-left">Follow Us</h1>
         <div class="flex justify-center sm:justify-start space-x-4">
@@ -312,14 +388,15 @@
           </a>
         </div>
       </div>
-  
+    
     </div>
   
-  
+   
     <div class="border-t border-white mt-10 pt-6 text-center text-white text-sm">
       © 2025 Your Company Name. All rights reserved.
     </div>
   </footer>
+  
   
   
   

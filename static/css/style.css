@@ -1,3 +1,7 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 h1 {
     font-family: 'Philosopher', sans-serif;
@@ -17,10 +21,11 @@ a,li{
 }
 
 
- 
+ html,body{
+  overflow-x: hidden;
+ }
 
-
-.overlay {
+ .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -59,7 +64,7 @@ a,li{
 }
 
 .navbar-links.visible {
-  opacity: 1; /* Make navbar links visible */
+  opacity: 1;
   transform: translateY(0); /* Move links to their normal position */
 }
 
@@ -68,18 +73,46 @@ a,li{
   opacity: 1;
 }
 
-/* Make sure navbar does not change position on scroll */
+/* Ensure navbar does not change position on scroll */
 .fixed-nav .navbar-links {
   transform: translateY(0) !important;
   opacity: 1 !important;
 }
 
 .fixed-nav #nav-hr {
-  display: block !important; /* Ensure horizontal line stays visible */
+  display: block !important;
 }
 
 
   .clip-triangle-right {
     clip-path: polygon(120% 0, 0 50%, 120% 100%);
   }
+
+
+  input, textarea, select {
+    font-family: 'Philosopher', sans-serif;
+  }
+  
+
+  /* @keyframes zoomOut {
+    0% {
+      transform: scale(0.5);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(30);
+      opacity: 0;
+    }
+  }
+  
+  #loader-img {
+    animation: zoomOut 6s ease forwards; 
+  } */
+  
+
+
   
