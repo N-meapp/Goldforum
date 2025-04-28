@@ -1,0 +1,85 @@
+
+h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+
+.navbar-links {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Philosopher', sans-serif;
+}
+a,li{
+  font-family: 'Philosopher', sans-serif;
+}
+
+
+ 
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 2s ease-out;
+}
+
+.content {
+  opacity: 0;
+  transition: opacity 1.5s ease-out;
+  z-index: 2;
+}
+
+.navbar-links {
+  opacity: 0;
+  transform: translateY(50px); /* Start from below the horizontal line */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.heading {
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.overlay.hidden {
+  opacity: 0;
+}
+
+.content.visible {
+  opacity: 1;
+}
+
+.navbar-links.visible {
+  opacity: 1; /* Make navbar links visible */
+  transform: translateY(0); /* Move links to their normal position */
+}
+
+.heading.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Make sure navbar does not change position on scroll */
+.fixed-nav .navbar-links {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+
+.fixed-nav #nav-hr {
+  display: block !important; /* Ensure horizontal line stays visible */
+}
+
+
+  .clip-triangle-right {
+    clip-path: polygon(120% 0, 0 50%, 120% 100%);
+  }
+  
